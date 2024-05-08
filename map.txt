@@ -1,0 +1,10 @@
+#!usr/bin/env python3
+#Linux priv. scripts
+#project does--
+            +os, release and kernel, user(whoami command) info
+            +network check
+            +cron jobs
+            +root service check
+            +suid-guid check
+
+screenshots
