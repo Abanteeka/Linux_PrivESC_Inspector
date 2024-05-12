@@ -11,7 +11,7 @@ def os_kernel_check():
         os.system('uname -a')
         os.system('cat /etc/os-release')
         #os.system('cat /etc/issue')
-        os.system('cls')
+        os.system('clear')
         print("-------------------------------------------------")
         root_check()
 
@@ -38,20 +38,22 @@ def root_check():
         SUID_GUID_check()
 
     else:
-        os.system('cls')
+        os.system('clear')
         print("root service check function")
+        os.system('ps aux | grep root')
         GOTOMAIN = input("Press ENTER to return to MAIN function.")
         main()
 
 # this function will check for abusable SUID/GUID binaries
 def SUID_GUID_check():
-        if flag != 0:
-        print(flag)
+    if flag != 0:
+        #print(flag)
         os.system('clear')
         print("SUID/GUID Check")
         print("")
         print("SUID Check")
         os.system('find / -perm -u=s -type f 2>/dev/null')
+        print("-------------------------------------------------")
         print("GUID Check")
         os.system('find / -perm -g=s -type f 2>/dev/null')
         print("-------------------------------------------------")
@@ -59,7 +61,7 @@ def SUID_GUID_check():
         main()
     else:
         os.system('clear')
-        # print(flag)
+        #print(flag)
         os.system('find / -perm -u=s -type f 2>/dev/null')
         print("GUID Check")
         os.system('find / -perm -g=s -type f 2>/dev/null')
@@ -84,7 +86,7 @@ def Cronjobs():
 
 def Improper_permission_check():
     print("Improper_permission_check")
-    os.system()
+    os.system('ls -l /etc | grep shadow')
 #Main Menu
 def main():
 
@@ -97,7 +99,9 @@ def main():
             2. Root Service Check
             3. SUID/GUID Check
             4. Full Scan
-            5. EXIT
+            5. Sudoer Permission Check
+            6. Cronjobs
+            7. EXIT
             LPC>>
             """)
 
@@ -114,7 +118,11 @@ def main():
             flag = flag + 1
             os_kernel_check()
         elif OPTION == "5":
-            exit()
+            print("You chose option 5")
+            Sudoer_Permission_Check()
+        elif OPTION == "6":
+            print("You chose option 6")
+            Cronjobs()
 
         else:
             BAD_OPTION = input("Invalid option. Press ENTER to continue.")
