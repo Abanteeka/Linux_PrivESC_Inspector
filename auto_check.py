@@ -45,22 +45,24 @@ def root_check():
 
 # this function will check for abusable SUID/GUID binaries
 def SUID_GUID_check():
-    if flag != 0:
+        if flag != 0:
         print(flag)
+        os.system('clear')
         print("SUID/GUID Check")
         print("")
         print("SUID Check")
-        os.system('find / -perm -u=s type f 2>/dev/null')
+        os.system('find / -perm -u=s -type f 2>/dev/null')
         print("GUID Check")
-        os.system('find / -perm -g=s type f 2>/dev/null')
+        os.system('find / -perm -g=s -type f 2>/dev/null')
         print("-------------------------------------------------")
         GOTOMAIN = input("Full Scan Completed! Press ENTER to return to MAIN function")
+        main()
     else:
-        os.system('cls')
-        print(flag)
-        os.system('find / -perm -u=s type f 2>/dev/null')
+        os.system('clear')
+        # print(flag)
+        os.system('find / -perm -u=s -type f 2>/dev/null')
         print("GUID Check")
-        os.system('find / -perm -g=s type f 2>/dev/null')
+        os.system('find / -perm -g=s -type f 2>/dev/null')
         print("-------------------------------------------------")
         print("SUID/GUID binaries check function")
         GOTOMAIN = input("Press ENTER to return to MAIN function.")
