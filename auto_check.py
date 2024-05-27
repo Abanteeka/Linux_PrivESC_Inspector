@@ -11,7 +11,7 @@ def os_kernel_check():
         os.system('uname -a')
         os.system('cat /etc/os-release')
         #os.system('cat /etc/issue')
-        os.system('clear')
+        os.system('cls')
         print("-------------------------------------------------")
         root_check()
 
@@ -38,7 +38,7 @@ def root_check():
         SUID_GUID_check()
 
     else:
-        os.system('clear')
+        os.system('cls')
         print("root service check function")
         os.system('ps aux | grep root')
         GOTOMAIN = input("Press ENTER to return to MAIN function.")
@@ -47,13 +47,12 @@ def root_check():
 # this function will check for abusable SUID/GUID binaries
 def SUID_GUID_check():
     if flag != 0:
-        #print(flag)
+        print(flag)
         os.system('clear')
         print("SUID/GUID Check")
         print("")
         print("SUID Check")
         os.system('find / -perm -u=s -type f 2>/dev/null')
-        print("-------------------------------------------------")
         print("GUID Check")
         os.system('find / -perm -g=s -type f 2>/dev/null')
         print("-------------------------------------------------")
@@ -61,7 +60,7 @@ def SUID_GUID_check():
         main()
     else:
         os.system('clear')
-        #print(flag)
+        # print(flag)
         os.system('find / -perm -u=s -type f 2>/dev/null')
         print("GUID Check")
         os.system('find / -perm -g=s -type f 2>/dev/null')
@@ -99,9 +98,7 @@ def main():
             2. Root Service Check
             3. SUID/GUID Check
             4. Full Scan
-            5. Sudoer Permission Check
-            6. Cronjobs
-            7. EXIT
+            5. EXIT
             LPC>>
             """)
 
@@ -118,11 +115,7 @@ def main():
             flag = flag + 1
             os_kernel_check()
         elif OPTION == "5":
-            print("You chose option 5")
-            Sudoer_Permission_Check()
-        elif OPTION == "6":
-            print("You chose option 6")
-            Cronjobs()
+            exit()
 
         else:
             BAD_OPTION = input("Invalid option. Press ENTER to continue.")
