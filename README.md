@@ -124,10 +124,6 @@ kali@kali:~$ python ./auto_check.py
               Enter Your Choice :
 
 ```
-## *Demo Video*
-```console
-
-```
 
 ## **Authors**
 
