@@ -156,10 +156,10 @@ def main():
         flag = 0
         print("<><><><><><><><><><><><><><><><><><><><><><>This is the main function<><><><><><><><><><><><><><><><><><><><><><>")
         OPTION = int(input("""
-		    1. OS/Kernel Check
+		    1. Full Scan
 		    2. Root Service Check
 		    3. SUID/GUID Check
-		    4. Full Scan
+		    4. OS/Kernel Check
 		    5. Sudoer Permission Check
 		    6. Cronjobs
 		    7. EXIT
