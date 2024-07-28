@@ -1,11 +1,6 @@
 import os
 
-# import subprocess
-# os.system("ls")
-# os.popen("ls").read()
-# subprocess.run()
 def os_kernel_check():
-    # this function will check for os, and kernel info
     if flag != 0:
         print("os/kernel check function")
         os.system('uname -a')
@@ -22,13 +17,12 @@ def os_kernel_check():
         os.system('cat /etc/issue')
         
 
-def network_info():  #later
+def network_info():
     try:
         os.system('cmd /k "ipconfig"')
     except:
         print("Invalid command")
 
-# this function will check for services running as root
 def root_check():
     if flag != 0:
         print("Root Service Check Function")
@@ -41,11 +35,8 @@ def root_check():
         print("root service check function")
         os.system('ps aux | grep root')
         
-
-# this function will check for abusable SUID/GUID binaries
 def SUID_GUID_check():
     if flag != 0:
-        #print(flag)
         os.system('clear')
         print("SUID/GUID Check")
         print("")
@@ -58,7 +49,6 @@ def SUID_GUID_check():
         
     else:
         os.system('clear')
-        #print(flag)
         os.system('find / -perm -u=s -type f 2>/dev/null')
         print("GUID Check")
         os.system('find / -perm -g=s -type f 2>/dev/null')
@@ -78,7 +68,7 @@ def Sudoer_Permission_Check():
 
 def Cronjobs():
         print("Cronjobs")
-        os.system('cat /etc/crontab')   #any possible failure
+        os.system('cat /etc/crontab')
 
 def Improper_permission_check():
     print("Improper_permission_check")
@@ -87,27 +77,98 @@ def Improper_permission_check():
 def passwords_keys_historyfiles():
     print("Check pass keys")
     os.system('cat ~/.*history | less')
-    
-#Main Menu
+
 def main():
-    
+    print("=" * 180)
+    print("                                            .*############*.                   ")                                            
+    print("                                          :##################-                 ")                                            
+    print("                                         *####################*                ")                                            
+    print("                                        *######################*               ")                                            
+    print("                                       =########################=              ")                                            
+    print("                                      -##########################=             ")                                            
+    print("                                     .############################.            ")                                            
+    print("                                     *#############################            ")                                            
+    print("                                    +##############################+           ")                                            
+    print("                                  .-++++++++++++++++++++++++++++++++-.         ")                                            
+    print("                              -*###==================================*###-     ")                                            
+    print("                            +############***********************###########+   ")                                            
+    print("                           +################################################+  ")                                            
+    print("                            #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#   ")                                            
+    print("                                 =@@@:::-----#@@+===========----:::@@@=        ")                                            
+    print("                                  @@@-:::-@-.:--..%+:::=%%%**=:::::@@@         ")                                            
+    print("                              .:--%@@-::+-.......  .@---:::::::::::%@%--:.     ")                                            
+    print("                             .----#@@-:-@...=%%#....:*::@@@#:::::::%@#----.    ")                                            
+    print("                             :---==%@-:=*...*@@%.....#::@@@@:::::::%%==---:    ")                                            
+    print("                              -==--*@-:-@...........*=:::-:::::::::@#--=--     ")                                            
+    print("                              :---==%-::-@........ #=:=+-::::::::::%==---:     ")                                            
+    print("                               :---==-::::-@*:::+@@%%@@@@@#::::::::===-=:      ")                                            
+    print("                                .=----:-::=%@@@@@@#::+@@@@@@%=::-::----.       ")                                            
+    print("                               :##+=--:*@@@@@@%*::::--:*%@@@@@@@*:-==+##:      ")                                            
+    print("                             =#######=::-+*#*-:::::::--:::=+**+-::=#######=    ")                                            
+    print("                           :#########=-::::::::::::----::::::::::-=#########:  ")                                            
+    print("                           *##########==*=:::::::-----::::::::::-=##########*  ")                                            
+    print("                              *###########*=-:::---::::::::::----*########.    ")                                            
+    print("                                +############*+==-::::::::-=---+#######+       ")                                            
+    print("                                :############%%%*------------:#######*         ")                                            
+    print("                              .############%%%%+--------:.    #########.       ")                                            
+    print("                             *############%%%%: +%@@@@%+      #####%####+      ")                                            
+    print("                            *############%%%%. .@@@@@@@@:    -####%######*     ")                                            
+    print("                           *###########%%%%%#.  @@@@@@@@  .#*####%%#######+    ")                                            
+    print("                          :##########%%%%%####  @@@@@@@@. ######%%#########    ")                                            
+    print("                          :########%%%%%%#####+:@@@@@@@@-+#####%%##########.   ")                                            
+    print("                           *#####%%%%%##%%#####%@@@@@@@@%#####%%###########    ")                                            
+    print("                            +%%%%#+.#####%%%####@@@@@@@@####%%%###########+    ")                                            
+    print("                                   .#######%%####@@@@@@####%%############*     ")                                            
+    print("                                   :########%%%###@@@@###%%%############*      ")                                            
+    print("                                   +#########%%%%#%@@%##%%%############*       ")                                            
+    print("                                   ###########%%%%%%%#%%%%###########%*        ")                                            
+    print("                                  :#############%%%##%%%#############+         ")                                            
+    print("                                  +#################%################*         ")                                            
+    print("                                  ################%%##################=        ")                                            
+    print("                                 ################%%####################        ")                                            
+    print("                                .###############%%#####################=       ")                                            
+    print("                                ################%#%@@@##################.      ")                                            
+    print("                               +###############%%#######################*      ")                                            
+    print("                              .################%#########################+     ")                                            
+    print("                                +##############%#######################*       ")                                            
+    print("                                  .+###########%###@@%##############*:         ")                                            
+    print("                                       @%######%###############+-.             ")                                            
+    print("                                       -@@@@@@@@@@@@@@@@@@@@@@                 ")                                            
+    print("                                        @@@@@@@@@@@@@@@@@@@@@+                 ")                                            
+    print("                                         @@@@@@@@@@@@@@@@@@@@                  ")                                            
+    print("                                         :@@@@@@@@@@@@@@@@@@                   ")                                            
+    print("                                          +@@@@@@@@@@@@@@@@                    ")                                            
+    print("                                           %@@@@@@@@@@@@@@=                    ")                                            
+    print("                                            @@@@@@@@@@@@@+                     ")                                            
+    print("                                             @@@@@@@@@@@+                      ")                                            
+    print("                                          %@@@@@@@@@@@@@@@@#                   ")                                            
+    print("                                        +@%@*@@@@@@@@@@@@@@@@:                 ")                                            
+    print("                                        @@@@@@@@@@=*@@@@@@@@@@                 ")
+    print("/*  _      _                    _____      _       ______  _____  _____     _____                           _               _                     _____        _          */ ")
+    print("/* | |    (_)                  |  __ \    (_)     |  ____|/ ____|/ ____|   |_   _|                         | |             (_)                   |  __ \      | |         */ ")
+    print("/* | |     _ _ __  _   ___  __ | |__) | __ ___   _| |__  | (___ | |          | |  _ __  ___ _ __   ___  ___| |_ ___  _ __   _ ___    ___  _ __   | |  | |_   _| |_ _   _  */ ")
+    print("/* | |    | | '_ \| | | \ \/ / |  ___/ '__| \ \ / /  __|  \___ \| |          | | | '_ \/ __| '_ \ / _ \/ __| __/ _ \| '__| | / __|  / _ \| '_ \  | |  | | | | | __| | | | */ ")
+    print("/* | |____| | | | | |_| |>  <  | |   | |  | |\ V /| |____ ____) | |____ _   _| |_| | | \__ \ |_) |  __/ (__| || (_) | |    | \__ \ | (_) | | | | | |__| | |_| | |_| |_| | */ ")
+    print("/* |______|_|_| |_|\__,_/_/\_\ |_|   |_|  |_| \_/ |______|_____/ \_____(_) |_____|_| |_|___/ .__/ \___|\___|\__\___/|_|    |_|___/  \___/|_| |_| |_____/ \__,_|\__|\__, | */ ")
+    print("/*                                                                                         | |                                                                      __/ | */ ")
+    print("/*                                                                                         |_|                                                                     |___/  */ ") 
+    print("=" * 180)
     while True:
         global flag
         flag = 0
-        print("This is the main function")  # Press Ctrl+F8 to toggle the breakpoint.
+        print("<><><><><><><><><><><><><><><><><><><><><><>This is the main function<><><><><><><><><><><><><><><><><><><><><><>")
         OPTION = int(input("""
-            1. OS/Kernel Check
-            2. Root Service Check
-            3. SUID/GUID Check
-            4. Full Scan
-            5. Sudoer Permission Check
-            6. Cronjobs
-            7. EXIT
-            LPC>>
-            """))
+		    1. OS/Kernel Check
+		    2. Root Service Check
+		    3. SUID/GUID Check
+		    4. Full Scan
+		    5. Sudoer Permission Check
+		    6. Cronjobs
+		    7. EXIT
+              Enter Your Choice : """))
 
         if OPTION == 1:
-            # print("You chose option 1")
+            print("You chose option 1")
             os_kernel_check()
         elif OPTION == 2:
             print("You chose option 2")
@@ -125,6 +186,7 @@ def main():
             print("You chose option 6")
             Cronjobs()
         elif OPTION == 7:
+            print("<><><><><><><><><><><><><><><><><><><><><><>THANK YOU<><><><><><><><><><><><><><><><><><><><><><>")
             break
 
         else:
@@ -134,4 +196,3 @@ def main():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
-    #auto_check()
