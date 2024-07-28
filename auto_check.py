@@ -167,6 +167,7 @@ def main():
 
         if OPTION == 1:
             print("You chose option 1")
+            flag = flag + 1
             os_kernel_check()
         elif OPTION == 2:
             print("You chose option 2")
@@ -175,7 +176,7 @@ def main():
             print("You chose option 3")
             SUID_GUID_check()
         elif OPTION == 4:
-            flag = flag + 1
+	    print("You chose option 4")
             os_kernel_check()
         elif OPTION == 5:
             print("You chose option 5")
