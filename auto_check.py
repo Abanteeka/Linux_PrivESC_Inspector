@@ -6,7 +6,6 @@ def os_kernel_check():
         os.system('uname -a')
         os.system('cat /etc/os-release')
         #os.system('cat /etc/issue')
-        os.system('clear')
         print("-------------------------------------------------")
         root_check()
 
@@ -37,7 +36,6 @@ def root_check():
         
 def SUID_GUID_check():
     if flag != 0:
-        os.system('clear')
         print("SUID/GUID Check")
         print("")
         print("SUID Check")
@@ -190,8 +188,7 @@ def main():
             break
 
         else:
-            BAD_OPTION = input("Invalid option. Press ENTER to continue.")
-            main()
+            print("Invalid option. Press ENTER to continue.")
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
