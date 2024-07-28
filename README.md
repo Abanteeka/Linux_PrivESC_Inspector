@@ -5,7 +5,7 @@
 ######
 *This program works fast and efficient to identify potential security vulnerabilities that could be exploited to gain elevated privileges.*
 ######
-*It helps us to identify depth details of target machine like root folders, sudo permission and also it efficient to automate scan.*
+*It helps us to identify depth details of target machine priviledges escalation information.*
 ### *Supported OS:*
     LINUX
 This program is made and designed for **Linux Opearing System** ***only***.
